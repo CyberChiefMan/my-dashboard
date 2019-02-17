@@ -14,6 +14,8 @@ import { red } from "@material-ui/core/colors";
 import TextField from "@material-ui/core/TextField";
 import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
+import AccountCircle from "@material-ui/icons/AccountCircle";
+
 import InputAdornment from "@material-ui/core/InputAdornment";
 import IconButton from "@material-ui/core/IconButton";
 import classNames from "classnames";
@@ -94,7 +96,7 @@ class LoginPageMudal extends React.Component {
                 تذکرات:
               </Typography>
               <Typography component="p">
-                کاربران گرامی روزی سه لیوان شیر فراموش نشود
+                کاربران گرامی روزی سه3 لیوان شیر فراموش نشود
               </Typography>
             </CardContent>
             <CardActions>
@@ -118,18 +120,24 @@ class LoginPageMudal extends React.Component {
                   onChange={this.handleChange("password")}
                   InputProps={{
                     endAdornment: (
-                      <InputAdornment position="end">
-                        <IconButton
-                          aria-label="Toggle password visibility"
-                          onClick={this.handleClickShowPassword}
-                        >
-                          {this.state.showPassword ? (
-                            <VisibilityOff />
-                          ) : (
-                            <Visibility />
-                          )}
-                        </IconButton>
-                      </InputAdornment>
+                      <Grid>
+                        <InputAdornment position="end">
+                          <IconButton
+                            aria-label="Toggle password visibility"
+                            onClick={this.handleClickShowPassword}
+                          >
+                            {this.state.showPassword ? (
+                              <VisibilityOff />
+                            ) : (
+                              <Visibility />
+                            )}
+                          </IconButton>
+                        </InputAdornment>
+                        <InputAdornment position="center">
+                          ddd
+                          <AccountCircle />
+                        </InputAdornment>
+                      </Grid>
                     )
                   }}
                 />
